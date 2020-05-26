@@ -1,6 +1,8 @@
 # Zadania Java
 #### *by Kawa Patryk & Twardosz Adam*
 
+--------------------------------------------------------------------------------------------------------------
+
 #### Uwaga: Jeśli nie możesz uruchomić klas projektu kliknij prawym przyciskiem myszy na folder src i wybierz:
 #### Mark directory as -> Sources root! ####
 
