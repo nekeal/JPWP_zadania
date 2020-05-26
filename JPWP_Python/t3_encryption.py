@@ -13,8 +13,8 @@ import json
 
 # TODO: Use !__lambda expressions__! to make pad() and unpad() functions
 BLOCK_SIZE = 16
-pad = ...
-unpad = ...
+pad = lambda x: x + (BLOCK_SIZE - len(x) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(x) % BLOCK_SIZE)
+unpad = lambda x: x[:-ord(x[len(x) - 1:])]
 
 
 # TODO: Function below.
@@ -24,9 +24,9 @@ def get_priv_key(password):
     """
     Function to generate AES encryption key
     :param password:
-    :return:
+    :return: hash:
     """
-    pass
+    return hashlib.sha256(password.encode()).digest()
 
 
 # TODO: Function below. Remember to fill the padding, so that blocks are full
@@ -37,7 +37,11 @@ def encrypt(raw_data, password):
     :param password:
     :return: Encrypted data 
     """
-    pass
+    priv_key = get_priv_key(password)
+    raw = pad(raw_data)
+    i = Random.new().read(AES.block_size)
+    ciph = AES.new(priv_key, AES.MODE_CBC, i)
+    return i + ciph.encrypt(raw.encode('utf-8'))
 
 
 # TODO: Function below. Remember to unpad decryprted data
@@ -48,8 +52,11 @@ def decrypt(encrypted_data, password):
     :param password:
     :return:
     """
-    pass
-
+    private_key = get_priv_key(password)
+    # enc = base64.b64decode(encrypted_data)
+    iv = encrypted_data[:16]
+    cipher = AES.new(private_key, AES.MODE_CBC, iv)
+    return unpad(cipher.decrypt(encrypted_data[16:]))
 
 ############################################################
 ###                                                      ###
