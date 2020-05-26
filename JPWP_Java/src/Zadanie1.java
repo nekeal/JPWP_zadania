@@ -10,10 +10,6 @@ public class Zadanie1 extends Application {
     Stage window;
     Scene look;
     BorderPane setting;
-    // Część rozwiązania
-    DatePicker pickDate;
-    Button submit;
-    String date;
 
     @Override
     public void start(Stage primaryStage) {
@@ -30,37 +26,7 @@ public class Zadanie1 extends Application {
 
         // Uwaga! Data wybierana z panelu jest zmienną typu LocalDate!
 
-        // Rozwiązanie!!!
-
-        pickDate = new DatePicker();
-        pickDate.setMinSize(100, 50);
-        pickDate.setMaxSize(100, 50);
-        setting.setCenter(pickDate);
-
-        submit = new Button("Submit");
-        submit.setMinSize(200, 25);
-        submit.setMaxSize(200, 25);
-        submit.setDisable(true);
-        setting.setBottom(submit);
-
-        pickDate.setOnAction(e ->{
-
-            date = pickDate.getValue().toString();
-            System.out.println(date);
-
-            if (date.equals("2020-05-26")) {
-
-                submit.setDisable(false);
-
-            } else {
-
-                submit.setDisable(true);
-
-            }
-
-        });
-
-        submit.setOnAction(e -> window.close());
+        // Tu wpisz rozwiązanie:
 
         ///////////////////////////////////
 
