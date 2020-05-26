@@ -1,6 +1,11 @@
 # Zadania Java
 #### *by Kawa Patryk & Twardosz Adam*
 
+--------------------------------------------------------------------------------------------------------------
+
+#### Uwaga: Jeśli nie możesz uruchomić klas projektu kliknij prawym przyciskiem myszy na folder src i wybierz:
+#### Mark directory as -> Sources root! ####
+
 ##### Zadanie do wykonania w klasie Zadanie1
 
 ## Zadanie no. 1
@@ -9,7 +14,7 @@ Zadanie 1: Dodaj do centralnej części siatki panel do wyboru daty (klasa DateP
 siatki przycisk submit. Przycisk ma być nieaktywny (metoda setDisable), dopóki nie wybierzemy daty dzisiejszej (26.05.2020).
 Aktywny przycisk powinien zamykać okno aplikacji.
 
-* UWAGA: Data wybierana z panelu jest zmienną typu LocalDate!
+** UWAGA: Data wybierana z panelu jest zmienną typu LocalDate!
 
 ##### Zadania do wykonania w klasie Zadanie2
 
@@ -17,7 +22,7 @@ Aktywny przycisk powinien zamykać okno aplikacji.
 
 Nałóż opóźnienie wynoszące trzy sekundy, które uruchomi się po kliknięciu dolnego przycisku.
 Po upływie trzech sekund dolny przycisk zniknie, a pojawi sie górny.
-Aby nałożyć opóźnienie należy stworzyć obiekt klasy PauseTransition, który w konstruktorze jako argument.
+Aby nałożyć opóźnienie należy stworzyć obiekt klasy PauseTransitionm który w konstruktorze jako argument
 Przyjmie czas trzy sekund (obiekt klasy Duration) 
 
 ## Zadanie no. 3
@@ -25,8 +30,8 @@ Przyjmie czas trzy sekund (obiekt klasy Duration)
 W centralnym punkcie siatki znajduje sie koło progresu.
 Spraw, aby po czterech kliknięciach górnego przycisku pasek był w pełni naładowany.
 Po naładowaniu należy sprawić, że w centralnej części siatki pojawi sie przycisk z napisem "GG WP"
-A górny przycisk zniknie.
-* UWAGA: Po każdym kliknięciu w górny przycisk powinno być widać rosnący progres!
+A górny przycisk zniknie
+** UWAGA: Po każdym kliknięciu w górny przycisk powinno być widać rosnący progres!
 
 ## Zadanie no. 4
 

@@ -14,9 +14,6 @@ public class Zadanie2 extends Application {
     BorderPane setting;
     Button bottomButton, topButton;
     ProgressIndicator progressCircle;
-    // Elementy rozwiązania
-    double i = 0;
-    Button GGWP = new Button();
 
 
     @Override
@@ -64,16 +61,7 @@ public class Zadanie2 extends Application {
         // Aby nałożyć opóźnienie należy stworzyć obiekt klasy PauseTransitionm który w konstruktorze jako argument
         // Przyjmie czas trzy sekund (obiekt klasy Duration)
 
-        // Rozwiązanie!!!
-
-
-        PauseTransition delay = new PauseTransition(Duration.seconds(3));
-        delay.setOnFinished(e -> {
-            bottomButton.setVisible(false);
-            topButton.setVisible(true);
-        });
-
-        bottomButton.setOnAction(e -> delay.play());
+        // Tu wpisz rozwiązanie:
 
         ///////////////////////////////////
 
@@ -84,35 +72,14 @@ public class Zadanie2 extends Application {
         // A górny przycisk zniknie
         // UWAGA: Po każdym kliknięciu w górny przycisk powinno być widać rosnący progres!
 
-        // Rozwiązanie!!!
-
-        topButton.setOnAction(e -> {
-
-            i = i + 0.25;
-            progressCircle.setProgress(i);
-
-            if (progressCircle.getProgress() == 1) {
-
-                topButton.setVisible(false);
-                GGWP.setText("GG WP");
-                setting.setCenter(GGWP);
-
-            }
-        });
-
+        // Tu wpisz rozwiązanie:
+		
         ///////////////////////////////////
 
         // Zadanie 4: Spraw, aby po kliknięcie w przycisk GG WP scena zmieniła sie na taką, którą zwraca metoda
         // Finish z klasy WellDone
 
-        // Rozwiązanie!!!
-
-        GGWP.setOnAction(e ->{
-
-            Scene finish = WellDone.finish(window);
-            window.setScene(finish);
-
-        });
+        // Tu wpisz rozwiązanie:
 
         ///////////////////////
 
